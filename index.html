@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor Secreto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-image: url(oned.jpg);
+      background-attachment: fixed;
+      
+      background-size: cover;
+      
+    }
+    input {
+      margin: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: aliceblue;
+      background-color: black;
+    }
+
+  </style>
+</head>
+<body>
+  <h1 style="color: white;">Descubre el Código Secreto</h1>
+  <p style="color: white;">Ingresa los códigos:</p>
+  <input type="text" id="code1" placeholder="Código 1">
+  <input type="text" id="code2" placeholder="Código 2">
+  <input type="text" id="code3" placeholder="Código 3">
+  <button onclick="convertCodes()">Convertir</button>
+  <div id="result"></div>
+
+  <script>
+    function convertCodes() {
+      const code1 = document.getElementById('code1').value;
+      const code2 = document.getElementById('code2').value;
+      const code3 = document.getElementById('code3').value;
+
+      if (code1 === "1234" && code2 === "5678" && code3 === "9101") {
+        const result = "C87T-FLPE-R4UF-VP7M";
+        document.getElementById('result').textContent = `El código final es: ${result}`;
+      } else {
+        document.getElementById('result').textContent = "¡Códigos incorrectos! Intenta de nuevo.";
+      }
+    }
+  </script>
+</body>
+</html>
